@@ -63,12 +63,7 @@ public class TestController {
     }
     private static void test1()
     {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("aaa");
-            }
-        }).start();
+        new Thread(() -> System.out.println("aaa")).start();
     }
     private static void test2()
     {
